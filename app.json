@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Raah",
+    "slug": "raahtheapp",
+    "extra": {
+      "serverUrl": "https://raah.app",
+      "donation_link": "https://raah.app/donate",
+      "feedback_link": "https://raah.app/feedback",
+      "insta_link": "https://www.instagram.com/raahtheapp"
+    },
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/logo_without_text.png",
+    "splash": {
+      "image": "./assets/logo_without_text.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.raahteam.raahtheapp",
+      "googleServicesFile": "./firebase/google-services.json",
+      "versionCode": 2,
+      "permissions": []
+    },
+    "ios": {
+      "bundleIdentifier": "com.raahteam.raahtheapp",
+      "googleServicesFile": "./firebase/GoogleService-Info.plist",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
+    "web": {},
+    "description": "Listen and Talk to someone anonymous"
+  }
+}
