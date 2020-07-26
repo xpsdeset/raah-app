@@ -61,15 +61,13 @@ let Background = ({ children, noCenter, bg }) => {
   )
 }
 
-let Loader = ({ item, children, emptyText }) => {
+let Loader = ({ item, children }) => {
   return (
     <>
       {!isLoaded(item) ? (
         <Loading />
       ) : isEmpty(item) ? (
-        <Container bg>
-          <Text> {emptyText ? emptyText : "Nothing to see"} </Text>
-        </Container>
+        <Container bg>{children}</Container>
       ) : (
         children
       )}
@@ -78,6 +76,7 @@ let Loader = ({ item, children, emptyText }) => {
 }
 
 let isSafe = (item) => isLoaded(item) && !isEmpty(item) && !_.isEmpty(item)
+let isSafeEmpty = (item) => isLoaded(item) && isEmpty(item)
 
 let Logo = () => <Image source={Images.logo} style={globalStyles.logo} />
 
@@ -89,4 +88,14 @@ let Loading = () => (
 
 const AppContext = createContext(null)
 
-export { Container, Row, Loader, isSafe, Logo, Background, Loading, AppContext }
+export {
+  Container,
+  Row,
+  Loader,
+  isSafe,
+  isSafeEmpty,
+  Logo,
+  Background,
+  Loading,
+  AppContext,
+}

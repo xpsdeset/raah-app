@@ -1,9 +1,10 @@
 import React from "react"
-import { Loader, Container, Row, isSafe } from "components"
-import { ListItem, Button } from "react-native-elements"
+import { Loader, Container, Row, isSafe, isSafeEmpty } from "components"
+import { ListItem, Button, Card, Text } from "react-native-elements"
 import enhancer from "./enhancer"
 import ListenerOverlay from "./components/ListenerOverlay"
-import { Text, FlatList } from "react-native"
+import nobodyTextGen from "components/text/NobodyText"
+import { FlatList } from "react-native"
 
 const waitingPoolScreen = ({ waitingPool, acceptSession }) => {
   let renderItem = ({ item }) => {
@@ -24,13 +25,20 @@ const waitingPoolScreen = ({ waitingPool, acceptSession }) => {
   return (
     <>
       <ListenerOverlay />
-      <Loader item={waitingPool} emptyText="Nobody wants to talk.">
+      <Loader item={waitingPool}>
         {isSafe(waitingPool) && (
           <FlatList
             data={Object.keys(waitingPool)}
             keyExtractor={(item) => item}
             renderItem={renderItem}
           />
+        )}
+        {isSafeEmpty(waitingPool) && (
+          <Card wrapperStyle={{ alignItems: "center" }}>
+            <Text h1>&#128533; </Text>
+            <Text>Nobody wants to talk.</Text>
+            <Text>{nobodyTextGen()}.</Text>
+          </Card>
         )}
       </Loader>
     </>
