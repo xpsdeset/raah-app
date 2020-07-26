@@ -6,11 +6,13 @@ import style from "./style"
 import globalStyles from "components/style"
 import { Image } from "react-native"
 import images from "components/Images"
-import { Input, Button } from "react-native-elements"
+import { CheckBox, Input, Button } from "react-native-elements"
+import PushNotificationHandler from "services/PushNotificationHandler"
 
 const frontPageScreen = (props) => {
   return (
     <Container bg>
+      <PushNotificationHandler />
       <Feather
         name="instagram"
         size={24}
@@ -44,6 +46,15 @@ const frontPageScreen = (props) => {
       {/* <Row style={globalStyles.row}>
         <Button title="Donate" onPress={() => onPress={() => props.openLink("donation_link")}} />
       </Row> */}
+      <Row style={globalStyles.row}>
+        <CheckBox
+          title="Notify when someone is waiting"
+          checked={props.profile.notify}
+          onPress={props.updateNotify}
+          containerStyle={{ height: 50, width: 280, marginLeft: 0 }}
+        />
+      </Row>
+
       <Row style={globalStyles.row}>
         <Button
           title="Feedback / Report Bugs"

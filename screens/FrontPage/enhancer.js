@@ -3,13 +3,20 @@ import { useNavigation } from "@react-navigation/native"
 import { Linking } from "react-native"
 import { BackHandler } from "react-native"
 import { useSelector } from "react-redux"
+import { useFirebase } from "react-redux-firebase"
 import Banned from "./components/Banned"
 
 import Constants from "expo-constants"
 
 let enhancer = (Component) => (props) => {
+  const firebase = useFirebase()
+
   const navigation = useNavigation()
   const profile = useSelector((state) => state.firebase.profile)
+
+  const updateNotify = () => {
+    return firebase.updateProfile({ notify: !profile.notify })
+  }
 
   const onNavigateToStarSession = () => {
     navigation.navigate("StartSessionScreen")
@@ -40,6 +47,8 @@ let enhancer = (Component) => (props) => {
         onNavigateToWaitingPool,
         onNavigateToStarSession,
         openLink,
+        profile,
+        updateNotify,
       }}
     />
   )
