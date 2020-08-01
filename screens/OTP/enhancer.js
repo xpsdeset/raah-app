@@ -37,14 +37,16 @@ export default (Component) => (props) => {
     }
   }
 
-  let postVerification = () => {
-    toast(
-      "Your number has been verified.\n Please read our terms and conditions"
-    )
-    navigation.navigate("TOSScreen", {
-      verificationId,
-      verificationCode,
-    })
+  let postVerification = async () => {
+    try {
+      const credential = firebase.auth.PhoneAuthProvider.credential(
+        verificationId,
+        verificationCode
+      )
+      await firebase.auth().signInWithCredential(credential)
+    } catch (err) {
+      toast(err.message)
+    }
   }
 
   return (

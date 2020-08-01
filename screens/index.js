@@ -17,11 +17,12 @@ const Stack = createStackNavigator()
 
 export default function NavigationStack() {
   const auth = useSelector((state) => state.firebase.auth)
+  const profile = useSelector((state) => state.firebase.profile)
 
   let [showLoverlay, setShowLoverlay] = useState(true)
   let [showRoverlay, setShowRoverlay] = useState(true)
 
-  if (!isLoaded(auth)) return <Loading />
+  if (!isLoaded(auth) || !isLoaded(profile)) return <Loading />
 
   return (
     <AppContext.Provider
@@ -36,12 +37,13 @@ export default function NavigationStack() {
                 component={OTPScreen}
                 options={{ headerShown: false }}
               />
-              <Stack.Screen
-                name="TOSScreen"
-                component={TOS}
-                options={{ headerShown: false }}
-              />
             </>
+          ) : !profile.tos ? (
+            <Stack.Screen
+              name="TOSScreen"
+              component={TOS}
+              options={{ headerShown: false }}
+            />
           ) : (
             <>
               <Stack.Screen

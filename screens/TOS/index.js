@@ -1,15 +1,13 @@
 import React, { useEffect } from "react"
 import { View, Text, ScrollView } from "react-native"
 import { Button } from "react-native-elements"
-import { Loading } from "components"
 import TosText from "components/text/MainTos"
 import toast from "services/toast"
 import style from "components/style"
 import enhancer from "./enhancer"
 import WebView from "react-native-webview"
 
-const TOS = ({ postVerification, loading }) => {
-  if (loading) return <Loading />
+const TOS = ({ postVerification }) => {
   return (
     <View
       style={[

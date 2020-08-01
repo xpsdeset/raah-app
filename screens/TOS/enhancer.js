@@ -21,18 +21,7 @@ export default (Component) => (props) => {
   }, [])
 
   let postVerification = async () => {
-    let { verificationId, verificationCode } = props.route.params
-    setLoading(true)
-    try {
-      const credential = firebase.auth.PhoneAuthProvider.credential(
-        verificationId,
-        verificationCode
-      )
-      await firebase.auth().signInWithCredential(credential)
-      props.navigation.navigate("FrontPageScreen")
-    } catch (err) {
-      toast(`Error: ${err.message}`)
-    }
+    firebase.updateProfile({ tos: true })
   }
 
   return (
@@ -40,7 +29,6 @@ export default (Component) => (props) => {
       {...props}
       {...{
         postVerification,
-        loading,
       }}
     />
   )
