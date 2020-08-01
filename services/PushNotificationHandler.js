@@ -38,7 +38,7 @@ export default function TokenHandler() {
         let notBody = response.notification.request.content.data
 
         if (notBody.screen == "waitingPool") {
-          navigation.navigate("WaitingPoolScreen")
+          navigation.navigate("WaitingPoolScreen", { notify: true })
         }
         Notifications.dismissAllNotificationsAsync()
       }

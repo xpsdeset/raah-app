@@ -6,6 +6,9 @@ let noByArr = [
   "Maybe they are charging themselves.",
 ]
 
-let randomNobodyText = () => noByArr[Math.floor(Math.random() * noByArr.length)]
+let randomNobodyText = (notify) => {
+  if (notify) return "Maybe they are already talking to someone"
+  else return noByArr[Math.floor(Math.random() * noByArr.length)]
+}
 
 export default randomNobodyText
