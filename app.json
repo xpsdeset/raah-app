@@ -8,10 +8,6 @@
       "feedback_link": "https://raah.app/feedback",
       "insta_link": "https://www.instagram.com/raahtheapp"
     },
-    "notification": {
-      "icon": "./assets/android-icon-96x96.png",
-      "color": "#000000"
-    },
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/logo_without_text.png",
@@ -25,8 +21,13 @@
     },
 
     "assetBundlePatterns": ["**/*"],
+    "notification": {
+      "color": "#002C56"
+    },
     "android": {
+      "icon": "./assets/icon96.png",
       "package": "com.raahteam.raahtheapp",
+      "useNextNotificationsApi": true,
       "googleServicesFile": "./firebase/google-services.json",
       "versionCode": 2,
       "permissions": []

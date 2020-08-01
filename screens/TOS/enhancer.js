@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { BackHandler } from "react-native"
 import { useSelector } from "react-redux"
 import toast from "services/toast"
-import getPushToken from "services/getPushToken"
 import { useFirebase } from "react-redux-firebase"
 
 export default (Component) => (props) => {
@@ -30,8 +29,6 @@ export default (Component) => (props) => {
         verificationCode
       )
       await firebase.auth().signInWithCredential(credential)
-      let deviceToken = await getPushToken()
-      firebase.updateProfile({ deviceToken })
       props.navigation.navigate("FrontPageScreen")
     } catch (err) {
       toast(`Error: ${err.message}`)
