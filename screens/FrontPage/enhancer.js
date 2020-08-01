@@ -1,21 +1,22 @@
 import React, { useEffect } from "react"
-import { useNavigation } from "@react-navigation/native"
 import { Linking } from "react-native"
 import { BackHandler } from "react-native"
 import { useSelector } from "react-redux"
 import { useFirebase } from "react-redux-firebase"
 import Banned from "./components/Banned"
-
+import { useFocusEffect } from "@react-navigation/native"
 import Constants from "expo-constants"
 
 let enhancer = (Component) => (props) => {
+  let { navigation } = props
   const firebase = useFirebase()
 
-  const navigation = useNavigation()
   const profile = useSelector((state) => state.firebase.profile)
 
   const updateNotify = () => {
-    return firebase.updateProfile({ notify: !profile.notify })
+    let notify = "yes"
+    if (profile.notify == "yes") notify = "no"
+    firebase.updateProfile({ notify })
   }
 
   const onNavigateToStarSession = () => {
@@ -29,6 +30,10 @@ let enhancer = (Component) => (props) => {
   const openLink = (link) => {
     Linking.openURL(Constants.manifest.extra[link])
   }
+
+  useFocusEffect(() => {
+    if (profile.notify == "busy") firebase.updateProfile({ notify: "yes" })
+  })
 
   useEffect(() => {
     const handleBackPress = () => true

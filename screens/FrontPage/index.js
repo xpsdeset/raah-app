@@ -49,7 +49,7 @@ const frontPageScreen = (props) => {
       <Row style={globalStyles.row}>
         <CheckBox
           title="Notify when someone is waiting"
-          checked={props.profile.notify}
+          checked={props.profile.notify == "yes"}
           onPress={props.updateNotify}
           containerStyle={{ height: 50, width: 280, marginLeft: 0 }}
         />

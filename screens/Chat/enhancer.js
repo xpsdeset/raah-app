@@ -3,6 +3,7 @@ import { BackHandler } from "react-native"
 import toast from "services/toast"
 import { useSelector } from "react-redux"
 import { useFirebaseConnect, useFirebase } from "react-redux-firebase"
+import { useFocusEffect } from "@react-navigation/native"
 
 export default (Component) => (props) => {
   let { navigation } = props
@@ -22,6 +23,7 @@ export default (Component) => (props) => {
   let [reportReason, setReportReason] = useState("")
 
   const auth = useSelector((state) => state.firebase.auth)
+  const profile = useSelector((state) => state.firebase.profile)
 
   useFirebaseConnect([`rooms/${roomId}`])
   session = useSelector(
@@ -77,6 +79,10 @@ export default (Component) => (props) => {
       }, 1000)
     }
   }
+
+  useFocusEffect(() => {
+    if (profile.notify == "yes") firebase.updateProfile({ notify: "busy" })
+  })
 
   useEffect(() => {
     const handleBackPress = () => true
