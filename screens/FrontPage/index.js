@@ -13,13 +13,30 @@ const frontPageScreen = (props) => {
   return (
     <Container bg>
       <PushNotificationHandler />
-      <Feather
-        name="instagram"
-        size={24}
-        color="black"
-        style={{ alignSelf: "flex-end" }}
-        onPress={() => props.openLink("insta_link")}
-      />
+      <Row
+        style={[
+          globalStyles.row,
+          {
+            marginTop: 30,
+            flexDirection: "row-reverse",
+          },
+        ]}
+      >
+        <Feather
+          name="instagram"
+          size={24}
+          color="black"
+          style={{ marginLeft: 5 }}
+          onPress={() => props.openLink("insta_link")}
+        />
+        <Feather
+          name="twitter"
+          size={24}
+          color="black"
+          // style={{ alignSelf: "flex-start" }}
+          onPress={() => props.openLink("twitter_link")}
+        />
+      </Row>
       <Image source={images.logo} style={style.logo} />
       <Row style={globalStyles.row}>
         <Button

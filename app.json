@@ -6,9 +6,10 @@
       "serverUrl": "https://raah.app",
       "donation_link": "https://raah.app/donate",
       "feedback_link": "https://raah.app/feedback",
-      "insta_link": "https://www.instagram.com/raahtheapp"
+      "insta_link": "https://www.instagram.com/raahtheapp",
+      "twitter_link": "https://twitter.com/raahtheapp"
     },
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/logo_without_text.png",
     "splash": {
@@ -29,13 +30,13 @@
       "package": "com.raahteam.raahtheapp",
       "useNextNotificationsApi": true,
       "googleServicesFile": "./firebase/google-services.json",
-      "versionCode": 2,
+      "versionCode": 3,
       "permissions": []
     },
     "ios": {
       "bundleIdentifier": "com.raahteam.raahtheapp",
       "googleServicesFile": "./firebase/GoogleService-Info.plist",
-      "buildNumber": "1.0.0",
+      "buildNumber": "1.0.1",
       "supportsTablet": true
     },
     "web": {},

@@ -12,6 +12,7 @@ import ChatScreen from "./Chat"
 import SeekerLoungeScreen from "./SeekerLounge"
 import WaitingPoolScreen from "./WaitingPool"
 import TOS from "./TOS"
+import Banned from "./Banned"
 
 const Stack = createStackNavigator()
 
@@ -23,6 +24,8 @@ export default function NavigationStack() {
   let [showRoverlay, setShowRoverlay] = useState(true)
 
   if (!isLoaded(auth) || !isLoaded(profile)) return <Loading />
+
+  if (isLoaded(auth) && isLoaded(profile) && profile.banned) return <Banned />
 
   return (
     <AppContext.Provider

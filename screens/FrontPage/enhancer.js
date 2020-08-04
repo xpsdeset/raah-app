@@ -3,7 +3,6 @@ import { Linking } from "react-native"
 import { BackHandler } from "react-native"
 import { useSelector } from "react-redux"
 import { useFirebase } from "react-redux-firebase"
-import Banned from "./components/Banned"
 import { useFocusEffect } from "@react-navigation/native"
 import Constants from "expo-constants"
 
@@ -42,8 +41,6 @@ let enhancer = (Component) => (props) => {
       BackHandler.removeEventListener("hardwareBackPress", handleBackPress)
     }
   })
-
-  if (profile.banned) return <Banned {...props} />
 
   return (
     <Component
