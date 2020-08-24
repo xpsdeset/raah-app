@@ -34,6 +34,7 @@
       "permissions": []
     },
     "ios": {
+      "icon": "./assets/ios_logo.png",
       "bundleIdentifier": "com.raahteam.raahtheapp",
       "googleServicesFile": "./firebase/GoogleService-Info.plist",
       "buildNumber": "1.0.1",
