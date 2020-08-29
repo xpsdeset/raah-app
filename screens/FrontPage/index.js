@@ -15,9 +15,9 @@ const frontPageScreen = (props) => {
       <PushNotificationHandler />
       <Row
         style={[
-          globalStyles.row,
           {
-            marginTop: 30,
+            marginTop: 10,
+            width: 280,
             flexDirection: "row-reverse",
           },
         ]}
@@ -37,7 +37,10 @@ const frontPageScreen = (props) => {
           onPress={() => props.openLink("twitter_link")}
         />
       </Row>
-      <Image source={images.logo} style={style.logo} />
+      <Image
+        source={images.logo}
+        style={[style.logo, { marginTop: 5, marginBottom: 20 }]}
+      />
       <Row style={globalStyles.row}>
         <Button
           icon={

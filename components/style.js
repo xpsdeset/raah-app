@@ -8,7 +8,7 @@ export default StyleSheet.create({
     width: "100%",
   },
   row: { height: 50, width: 280 },
-  logo: { width: 150, height: 170, marginTop: "10%", marginBottom: 50 },
+  logo: { width: 150, height: 170, marginTop: 10, marginBottom: 10 },
   title: {
     fontSize: 22,
     alignSelf: "center",

@@ -4,6 +4,7 @@ import { BackHandler } from "react-native"
 import { useSelector } from "react-redux"
 import { useFirebase } from "react-redux-firebase"
 import { useFocusEffect } from "@react-navigation/native"
+import toast from "services/toast"
 import Constants from "expo-constants"
 
 let enhancer = (Component) => (props) => {
