@@ -34,7 +34,7 @@ export default function NavigationStack() {
       value={{ showLoverlay, setShowLoverlay, showRoverlay, setShowRoverlay }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="WaitingPoolScreen">
+        <Stack.Navigator>
           {isEmpty(auth) ? (
             <>
               <Stack.Screen

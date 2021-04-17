@@ -5,6 +5,7 @@ import globalStyles from "components/style"
 import style from "./style"
 import chatEnhancer from "./enhancer"
 import { GiftedChat } from "react-native-gifted-chat"
+import TypingIndicator from "react-native-gifted-chat/lib/TypingIndicator"
 import { Image } from "react-native"
 import images from "components/Images"
 import Menu from "./components"
@@ -91,7 +92,11 @@ const chatScreen = (props) => {
             onSend,
             user,
             onInputTextChanged,
-            isTyping: session.typing && session.typing[oppoRole],
+            renderFooter: () => (
+              <TypingIndicator
+                isTyping={session.typing && session.typing[oppoRole]}
+              />
+            ),
             renderDay: null,
           }}
           {...(session.ses_ended && endChatFooter)}
