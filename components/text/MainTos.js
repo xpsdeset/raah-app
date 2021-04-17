@@ -1,5 +1,5 @@
 let tosStr = `
-<div style="font-size:25px;padding:20px;">
+<div style="font-size:15px;padding:20px;">
 <h3><em>Welcome to Raah</em></h3>
 <div>
 <div><strong>Raah&nbsp;is&nbsp;not&nbsp;a&nbsp;dating&nbsp;site.&nbsp;Listen,&nbsp;process&nbsp;then&nbsp;respond.</strong></div>

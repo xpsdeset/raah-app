@@ -16,6 +16,8 @@ import Banned from "./Banned"
 
 const Stack = createStackNavigator()
 
+const title = "Raah"
+
 export default function NavigationStack() {
   const auth = useSelector((state) => state.firebase.auth)
   const profile = useSelector((state) => state.firebase.profile)
@@ -32,13 +34,13 @@ export default function NavigationStack() {
       value={{ showLoverlay, setShowLoverlay, showRoverlay, setShowRoverlay }}
     >
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="WaitingPoolScreen">
           {isEmpty(auth) ? (
             <>
               <Stack.Screen
                 name="LoginScreen"
                 component={OTPScreen}
-                options={{ headerShown: false }}
+                options={{ headerShown: false, title }}
               />
             </>
           ) : !profile.tos ? (
@@ -52,27 +54,27 @@ export default function NavigationStack() {
               <Stack.Screen
                 name="FrontPageScreen"
                 component={FrontPageScreen}
-                options={{ headerShown: false }}
+                options={{ headerShown: false, title }}
               />
               <Stack.Screen
                 name="ChatScreen"
                 component={ChatScreen}
-                options={{ headerShown: false, headerLeft: null }}
+                options={{ headerShown: false, headerLeft: null, title }}
               />
               <Stack.Screen
                 name="StartSessionScreen"
                 component={StartSessionScreen}
-                options={{ title: "", headerBackTitle: "" }}
+                options={{ headerBackTitle: "", title }}
               />
               <Stack.Screen
                 name="WaitingPoolScreen"
                 component={WaitingPoolScreen}
-                options={{ title: "", headerBackTitle: "" }}
+                options={{ headerBackTitle: "", title }}
               />
               <Stack.Screen
                 name="SeekerLoungeScreen"
                 component={SeekerLoungeScreen}
-                options={{ headerShown: false }}
+                options={{ headerShown: false, title }}
               />
             </>
           )}

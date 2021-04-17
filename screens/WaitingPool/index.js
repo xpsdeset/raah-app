@@ -1,6 +1,7 @@
 import React from "react"
 import { Loader, Container, Row, isSafe, isSafeEmpty } from "components"
 import { ListItem, Button, Card, Text } from "react-native-elements"
+import { View } from "react-native"
 import enhancer from "./enhancer"
 import ListenerOverlay from "./components/ListenerOverlay"
 import nobodyTextGen from "components/text/NobodyText"
@@ -15,13 +16,14 @@ const waitingPoolScreen = ({ waitingPool, acceptSession, route }) => {
     if (!d) return null
     if (d.reason !== "") reason = d.reason
     return (
-      <ListItem
-        title={reason}
-        bottomDivider
-        rightElement={
-          <Button title={"Connect"} onPress={() => acceptSession(item)} />
-        }
-      />
+      <ListItem>
+        <ListItem.Content>
+          <ListItem.Title style={{ fontWeight: "bold", paddingLeft: "30%" }}>
+            <View style={{ width: 250 }}>{reason}</View>
+            <Button title={"Connect"} onPress={() => acceptSession(item)} />
+          </ListItem.Title>
+        </ListItem.Content>
+      </ListItem>
     )
   }
   return (
