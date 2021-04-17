@@ -1,4 +1,6 @@
 import React, { createContext } from "react"
+import { WebView as RNWebView } from "react-native-webview"
+import WWebView from "react-native-web-webview"
 import {
   View,
   Text,
@@ -14,10 +16,17 @@ import Images from "./Images"
 import globalStyles from "./style"
 import { isLoaded, isEmpty } from "react-redux-firebase"
 import _ from "lodash"
+import { Overlay as NOverlay } from "react-native-elements"
+import Modal from "modal-react-native-web"
 
 let Container = ({ children, style, bg }) => {
+  function dismissKeyboard() {
+    if (Platform.OS != "web") {
+      Keyboard.dismiss()
+    }
+  }
   let Cview = (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <TouchableWithoutFeedback onPress={dismissKeyboard}>
       <KeyboardAvoidingView
         behavior={Platform.OS == "ios" ? "padding" : "height"}
         style={{
@@ -43,17 +52,27 @@ let Row = ({ children, style }) => {
 }
 
 let Background = ({ children, noCenter, bg }) => {
-  const { width, height } = Dimensions.get("window")
+  let { width, height } = Dimensions.get("window")
+
   let src = Images.background
   if (bg == "white") src = Images.backgroundWhite
+
+  if (Platform.OS == "web") {
+    width = "100%"
+    height = "100%"
+  } else {
+    width = width < height ? width : height
+    height = width < height ? height : width
+  }
+
   return (
     <ImageBackground
       source={src}
       style={noCenter ? { flex: 1 } : globalStyles.bg}
       imageStyle={{
         resizeMode: "repeat",
-        width: width < height ? width : height,
-        height: width < height ? height : width,
+        width,
+        height,
       }}
     >
       {children}
@@ -86,6 +105,16 @@ let Loading = () => (
   </Container>
 )
 
+const WebView = Platform.OS === "web" ? WWebView : RNWebView
+
+let HTMLView = ({ html, style = {} }) => (
+  <WebView source={{ html }} style={style} />
+)
+let Overlay = ({ children, ...props }) => {
+  if (Platform.OS === "web") props.ModalComponent = Modal
+  return <NOverlay {...props}>{children}</NOverlay>
+}
+
 const AppContext = createContext(null)
 
 export {
@@ -98,4 +127,6 @@ export {
   Background,
   Loading,
   AppContext,
+  HTMLView,
+  Overlay,
 }

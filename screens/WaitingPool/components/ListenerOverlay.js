@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react"
 import { ScrollView } from "react-native"
-import { Button, Overlay, Text } from "react-native-elements"
+import { Button, Text } from "react-native-elements"
 import WebView from "react-native-webview"
-import { AppContext } from "components"
+import { AppContext, HTMLView, Overlay } from "components"
 import style from "components/style"
 import TosText from "components/text/ListenerTos"
 
@@ -16,7 +16,7 @@ let LOverlay = (props) => {
     >
       <>
         <Text style={style.title}>Important Tips For Listeners</Text>
-        <WebView source={{ html: TosText }} />
+        <HTMLView html={TosText} />
         <Button title={"I Agree"} onPress={() => setShowLoverlay(false)} />
       </>
     </Overlay>

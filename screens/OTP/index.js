@@ -44,12 +44,13 @@ let OTP = (props) => {
           <FirebaseRecaptchaVerifierModal
             ref={recaptchaVerifier}
             firebaseConfig={firebaseConfig}
+            attemptInvisibleVerification={true}
           />
 
           <Text style={{ marginTop: 20 }}>Enter phone number</Text>
           <Input
-            inputContainerStyle={style.inputContainerStyle}
             placeholder="+1 999 999 9999"
+            inputContainerStyle={style.inputContainerStyle}
             autoFocus
             autoCompleteType="tel"
             keyboardType="phone-pad"

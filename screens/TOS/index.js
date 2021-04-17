@@ -6,6 +6,7 @@ import toast from "services/toast"
 import style from "components/style"
 import enhancer from "./enhancer"
 import WebView from "react-native-webview"
+import { HTMLView } from "components"
 
 const TOS = ({ postVerification }) => {
   return (
@@ -18,8 +19,8 @@ const TOS = ({ postVerification }) => {
       ]}
     >
       <Text style={style.title}>Terms and conditions</Text>
-      <WebView
-        source={{ html: TosText }}
+      <HTMLView
+        html={TosText}
         style={{
           marginBottom: 10,
         }}

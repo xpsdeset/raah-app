@@ -2,7 +2,7 @@ import React from "react"
 import { StatusBar } from "expo-status-bar"
 import { store, rrfProps } from "./redux"
 import { Provider } from "react-redux"
-import Navigator from "./screens/index"
+import Navigator from "./screens"
 import { ReactReduxFirebaseProvider } from "react-redux-firebase"
 
 console.disableYellowBox = true

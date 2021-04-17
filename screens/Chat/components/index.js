@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import { Button, Overlay, Input } from "react-native-elements"
+import { Button, Input } from "react-native-elements"
 import { View, Text } from "react-native"
 import ReportTos from "components/text/ReportTos"
+import { Overlay } from "components"
 
 const Menu = (props) => {
   let [showEndConvo, setShowEndConvo] = useState(false)

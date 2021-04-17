@@ -29,8 +29,10 @@ export default function TokenHandler() {
 
   useEffect(() => {
     registerForPushNotificationsAsync().then((deviceToken) => {
-      firebase.updateProfile({ deviceToken })
-      setExpoPushToken(deviceToken)
+      if (deviceToken) {
+        firebase.updateProfile({ deviceToken })
+        setExpoPushToken(deviceToken)
+      }
     })
 
     responseListener.current = Notifications.addNotificationResponseReceivedListener(
