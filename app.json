@@ -20,8 +20,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "notification": {
       "color": "#002C56"
     },
