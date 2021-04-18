@@ -9,7 +9,9 @@
     "b:a": "expo build:android -t app-bundle --skip-workflow-check",
     "b:i": "expo build:ios -t archive --skip-workflow-check",
     "u:a": "expo upload:android",
-    "u:i": "expo upload:ios"
+    "u:i": "expo upload:ios",
+    "predeploy": "expo build:web",
+    "deploy": "yarn predeploy && firebase deploy --only hosting"
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",

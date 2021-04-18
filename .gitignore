@@ -2,3 +2,5 @@ node_modules/**/*
 .expo/*
 *.logs
 firebase/*
+web-build
+hosting*
