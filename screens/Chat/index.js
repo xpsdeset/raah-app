@@ -1,10 +1,12 @@
 import React from "react"
 import { Background, Row } from "components"
 import { Button, Overlay, Text, Header } from "react-native-elements"
+import { Platform } from "react-native"
+
 import globalStyles from "components/style"
 import style from "./style"
-import chatEnhancer from "./enhancer"
-import { GiftedChat } from "react-native-gifted-chat"
+import enhancer from "./enhancer"
+import { GiftedChat, Composer } from "react-native-gifted-chat"
 import TypingIndicator from "react-native-gifted-chat/lib/TypingIndicator"
 import { Image } from "react-native"
 import images from "components/Images"
@@ -25,13 +27,8 @@ const chatScreen = (props) => {
   } = props
 
   const endChatFooter = {
-    renderInputToolbar: () => (
-      <Button
-        title="End conversation"
-        onPress={endConversation}
-        buttonStyle={{ borderRadius: 0, height: 50 }}
-      />
-    ),
+    minInputToolbarHeight: 0,
+    renderInputToolbar: () => null,
   }
 
   let messages = []
@@ -63,13 +60,32 @@ const chatScreen = (props) => {
     })
   }
 
-  if (roomInfo.role == "listener") {
+  if (roomInfo?.role == "listener") {
     myText = "You are listening"
     src = images.icon_listener
   } else {
     myText = "You are talking"
     src = images.teller_display_right
   }
+
+  const renderComposer = (props) => (
+    <Composer
+      {...props}
+      textInputProps={{
+        ...props.textInputProps,
+        // for enabling the Return key to send a message only on web
+        blurOnSubmit: Platform.OS === "web",
+        onSubmitEditing:
+          Platform.OS === "web"
+            ? () => {
+                if (props.text && props.onSend) {
+                  props.onSend({ text: props.text.trim() }, true)
+                }
+              }
+            : undefined,
+      }}
+    />
+  )
 
   return (
     <Background noCenter>
@@ -92,11 +108,19 @@ const chatScreen = (props) => {
             onSend,
             user,
             onInputTextChanged,
-            renderFooter: () => (
-              <TypingIndicator
-                isTyping={session.typing && session.typing[oppoRole]}
-              />
-            ),
+            renderComposer,
+            renderFooter: () =>
+              session.ses_ended ? (
+                <Button
+                  title="End conversation"
+                  onPress={endConversation}
+                  buttonStyle={{ borderRadius: 0, height: 50 }}
+                />
+              ) : (
+                <TypingIndicator
+                  isTyping={session.typing && session.typing[oppoRole]}
+                />
+              ),
             renderDay: null,
           }}
           {...(session.ses_ended && endChatFooter)}
@@ -106,4 +130,4 @@ const chatScreen = (props) => {
   )
 }
 
-export default chatEnhancer(chatScreen)
+export default enhancer(chatScreen)
