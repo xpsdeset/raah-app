@@ -3,9 +3,11 @@ import { BackHandler } from "react-native"
 import { useSelector } from "react-redux"
 import { useFirebase, useFirebaseConnect } from "react-redux-firebase"
 import { useFocusEffect } from "@react-navigation/native"
+import toast from "services/toast"
 
 export default (Component) => (props) => {
   const { navigation } = props
+  const [hasReason, setHasReason] = useState(false)
   const firebase = useFirebase()
   let auth = props.route.params
 
@@ -26,6 +28,13 @@ export default (Component) => (props) => {
   })
 
   useEffect(() => {
+    if (waiting) setHasReason(true)
+    if (!waiting && hasReason) {
+      navigation.navigate("StartSessionScreen")
+      toast(
+        "Sorry, we couldn't connect you with anyone at the moment. \nPlease try again."
+      )
+    }
     if (waiting && waiting.listener) {
       let roomId = `${auth.uid}-${waiting.listener}`
       firebase.ref(`waiting/${auth.uid}`).remove()
