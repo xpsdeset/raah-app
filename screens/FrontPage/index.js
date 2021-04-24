@@ -1,4 +1,4 @@
-import { Feather } from "@expo/vector-icons"
+import { Feather, MaterialCommunityIcons } from "@expo/vector-icons"
 import React from "react"
 import { Container, Row } from "components"
 import frontPageEnhancer from "./enhancer"
@@ -33,8 +33,15 @@ const frontPageScreen = (props) => {
           name="twitter"
           size={24}
           color="black"
-          // style={{ alignSelf: "flex-start" }}
+          style={{ marginLeft: 5 }}
           onPress={() => props.openLink("twitter_link")}
+        />
+        <MaterialCommunityIcons
+          name="telegram"
+          size={26}
+          color="black"
+          // style={{ alignSelf: "flex-start" }}
+          onPress={() => props.openLink("telegram_group")}
         />
       </Row>
       <Image
@@ -67,11 +74,11 @@ const frontPageScreen = (props) => {
         <Button title="Donate" onPress={() => onPress={() => props.openLink("donation_link")}} />
       </Row> */}
       <Row style={globalStyles.row}>
-        <CheckBox
-          title="Notify when someone is waiting"
-          checked={props.profile.notify == "yes"}
-          onPress={props.updateNotify}
-          containerStyle={{ height: 50, width: 280, marginLeft: 0 }}
+        <Button
+          buttonStyle={{ backgroundColor: "white" }}
+          titleStyle={{ fontSize: 14, color: "black" }}
+          title={"Get notified when someone is waiting \n on Telegram"}
+          onPress={() => props.openLink("telegram_notify")}
         />
       </Row>
 

@@ -36,6 +36,8 @@ export default (Component) => (props) => {
       )
     }
     if (waiting && waiting.listener) {
+      if (hasReason) setHasReason(false)
+
       let roomId = `${auth.uid}-${waiting.listener}`
       firebase.ref(`waiting/${auth.uid}`).remove()
       navigation.navigate("ChatScreen", { roomId, role: "talker" })

@@ -6,7 +6,7 @@ import toast from "services/toast"
 export default (Component) => (props) => {
   let { navigation } = props
   const firebase = useFirebase()
-  const [phoneNumber, setPhoneNumber] = useState("+91")
+  const [phoneNumber, setPhoneNumber] = useState("")
   const [verificationId, setVerificationId] = useState()
   const [verificationCode, setVerificationCode] = useState()
   const [phase2, setPhase2] = useState(false)

@@ -31,11 +31,7 @@ let OTP = (props) => {
             Raah is a place to offer/seek comfort. Raah requests you to do phone
             number verification to help us protect against trolls and spam.
           </Text>
-          <Button
-            title="Continue"
-            disabled={!phoneNumber}
-            onPress={() => setPhase2(true)}
-          />
+          <Button title="Continue" onPress={() => setPhase2(true)} />
         </>
       )}
       {phase2 && (
