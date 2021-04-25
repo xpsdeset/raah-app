@@ -1,5 +1,7 @@
+import { FontSize } from "components"
+
 let str = `
-<div style="font-size:15px;">
+<div style="font-size:${FontSize()}px;">
 <p>Users providing this listening services are regular people with no professional training behind their advice. Venting to a stranger can be incredibly dangerous if you are in a mentally sensitive state. By entering the chat, you understand that Raah! is not liable for any advice given or conversations conducted during a chat session.</p>
 <p>By clicking "I agree, Proceed to Chat" you agree to the following:</p>
 <ul>

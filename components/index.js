@@ -110,6 +110,9 @@ const WebView = Platform.OS === "web" ? WWebView : RNWebView
 let HTMLView = ({ html, style = {} }) => (
   <WebView source={{ html }} style={style} />
 )
+
+let FontSize = () => (Platform.OS == "web" ? 15 : 27)
+
 let Overlay = ({ children, ...props }) => {
   if (Platform.OS === "web") props.ModalComponent = Modal
   return <NOverlay {...props}>{children}</NOverlay>
@@ -129,4 +132,5 @@ export {
   AppContext,
   HTMLView,
   Overlay,
+  FontSize,
 }

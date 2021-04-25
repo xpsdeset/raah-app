@@ -18,8 +18,10 @@ const waitingPoolScreen = ({ waitingPool, acceptSession, route }) => {
     return (
       <ListItem>
         <ListItem.Content>
-          <ListItem.Title style={{ fontWeight: "bold", paddingLeft: "30%" }}>
-            <View style={{ width: 250 }}>{reason}</View>
+          <ListItem.Title style={{ fontWeight: "bold" }}>
+            <View style={{ width: 250 }}>
+              <Text>{reason}</Text>
+            </View>
             <Button title={"Connect"} onPress={() => acceptSession(item)} />
           </ListItem.Title>
         </ListItem.Content>

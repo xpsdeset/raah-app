@@ -1,5 +1,6 @@
+import { FontSize } from "components"
 let str = `
-<div style="font-size:15px;">
+<div style="font-size:${FontSize()}px;">
 <ol>
 <li>Be attentive, but relaxed.</li>
 <li>I understand that as a listener I am not to perform the role of a real therapist and will refer any user to seek appropriate help from a therapist if the case permits it.</li>
