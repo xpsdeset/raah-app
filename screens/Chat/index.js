@@ -72,17 +72,18 @@ const chatScreen = (props) => {
     <Composer
       {...props}
       textInputProps={{
-        ...props.textInputProps,
-        // for enabling the Return key to send a message only on web
-        blurOnSubmit: Platform.OS === "web",
-        onSubmitEditing:
-          Platform.OS === "web"
-            ? () => {
-                if (props.text && props.onSend) {
-                  props.onSend({ text: props.text.trim() }, true)
-                }
-              }
-            : undefined,
+        multiline: true,
+        onKeyPress: (event) => {
+          if (Platform.OS === "web" && event.keyCode === 13) {
+            let message = event.target.value
+            props.onSend([{ text: message }], true)
+            const target = event.nativeEvent.target
+            setTimeout(() => {
+              props.onInputTextChanged("")
+              target.focus()
+            }, 200)
+          }
+        },
       }}
     />
   )

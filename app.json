@@ -11,7 +11,7 @@
       "telegram_notify": "https://t.me/knockknockraah",
       "telegram_group": "https://t.me/raahtheapp"
     },
-    "version": "1.0.5",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/logo_without_text.png",
     "splash": {
@@ -31,7 +31,7 @@
       "package": "com.raahteam.raahtheapp",
       "useNextNotificationsApi": true,
       "googleServicesFile": "./firebase/google-services.json",
-      "versionCode": 4,
+      "versionCode": 5,
       "permissions": []
     },
     "ios": {

@@ -1,5 +1,18 @@
 {
   "projects": {
-    "default": "raah-dev"
+    "default": "raah-dev",
+    "prod": "buddy247-d5530"
+  },
+  "targets": {
+    "buddy247-d5530": {
+      "hosting": {
+        "talk": [
+          "talk"
+        ],
+        "raahtalk": [
+          "raahtalk"
+        ]
+      }
+    }
   }
 }
