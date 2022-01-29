@@ -25,7 +25,7 @@
 17        android:allowBackup="false"
 17-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:11:7-34
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.5.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/630b866c4e6d69940e7de59b818a89d2/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.6.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/b74cfe74c932552a35791816a9ce9bf2/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
 20-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:9:7-41

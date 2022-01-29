@@ -4,23 +4,6 @@
             "outputFile": "/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/bhavikathakkar/.gradle/caches/transforms-3/630b866c4e6d69940e7de59b818a89d2/transformed/core-1.5.0/res/values-fr-rCA/values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5354",
-                        "endColumns": "100",
-                        "endOffsets": "5450"
-                    }
-                },
-                {
                     "source": "/Users/bhavikathakkar/.gradle/caches/transforms-3/c75cc2a28f38baf797cbe0c9b67210e4/transformed/jetified-play-services-base-18.0.1/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -69,6 +52,23 @@
                         "startOffsets": "105,216,323,433,520,626,756,841,921,1012,1105,1203,1298,1398,1491,1584,1679,1770,1861,1947,2057,2168,2271,2382,2490,2597,2756,5267",
                         "endColumns": "110,106,109,86,105,129,84,79,90,92,97,94,99,92,92,94,90,90,85,109,110,102,110,107,106,158,98,86",
                         "endOffsets": "211,318,428,515,621,751,836,916,1007,1100,1198,1293,1393,1486,1579,1674,1765,1856,1942,2052,2163,2266,2377,2485,2592,2751,2850,5349"
+                    }
+                },
+                {
+                    "source": "/Users/bhavikathakkar/.gradle/caches/transforms-3/b74cfe74c932552a35791816a9ce9bf2/transformed/core-1.6.0/res/values-fr-rCA/values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5354",
+                        "endColumns": "100",
+                        "endOffsets": "5450"
                     }
                 }
             ]
