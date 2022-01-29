@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>651505415845-teafatpcipp9su4b51h1dgepg3a5sbj2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.651505415845-teafatpcipp9su4b51h1dgepg3a5sbj2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBs_m89_yriaeUkhDNpfpNXEYV1TFeF23s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>651505415845</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.raahteam.raahtheapp</string>
+	<key>PROJECT_ID</key>
+	<string>buddy247-d5530</string>
+	<key>STORAGE_BUCKET</key>
+	<string>buddy247-d5530.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:651505415845:ios:4d7abcdf4f2ef5cacd3f4c</string>
+	<key>DATABASE_URL</key>
+	<string>https://buddy247-d5530.firebaseio.com</string>
+</dict>
+</plist>
