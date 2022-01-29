@@ -1,4 +1,4 @@
-package com.raah;
+package com.raahteam.raahtheapp;
 
 import android.app.Application;
 import android.content.Context;

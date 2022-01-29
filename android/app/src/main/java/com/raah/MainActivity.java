@@ -1,4 +1,4 @@
-package com.raah;
+package com.raahteam.raahtheapp;
 
 import com.facebook.react.ReactActivity;
 

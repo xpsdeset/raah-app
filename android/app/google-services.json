@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "651505415845",
+    "firebase_url": "https://buddy247-d5530.firebaseio.com",
+    "project_id": "buddy247-d5530",
+    "storage_bucket": "buddy247-d5530.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651505415845:android:bc5a64d490ef427bcd3f4c",
+        "android_client_info": {
+          "package_name": "com.raahteam.raahtheapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651505415845-m725arge1rjams50d40fls5vp0789nf1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtP1SqbEYM6axyMiMG99Uw5DfT8AW_gus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651505415845-m725arge1rjams50d40fls5vp0789nf1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "651505415845-uihfbcuranop7uar1202p5srm4s5d3pn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sethuraman.buddy247"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

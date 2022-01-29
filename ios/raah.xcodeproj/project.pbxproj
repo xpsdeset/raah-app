@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		325D02B85E70C3D37CDF5502 /* libPods-raah.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD265AC75EB4EB69803DB076 /* libPods-raah.a */; };
+		6FC146AE27A56A24000A153F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FC146AD27A56A24000A153F /* GoogleService-Info.plist */; };
 		7E33F5AC9B15B076A9A8559E /* libPods-raah-raahTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C671E9632EF7CA4CDD0F68 /* libPods-raah-raahTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = raah/main.m; sourceTree = "<group>"; };
 		374CE44C5339ADF21DBC5C86 /* Pods-raah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-raah.release.xcconfig"; path = "Target Support Files/Pods-raah/Pods-raah.release.xcconfig"; sourceTree = "<group>"; };
 		5EB27C8E9E3549BE818C51AE /* Pods-raah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-raah.debug.xcconfig"; path = "Target Support Files/Pods-raah/Pods-raah.debug.xcconfig"; sourceTree = "<group>"; };
+		6FC146AD27A56A24000A153F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = raah/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95C671E9632EF7CA4CDD0F68 /* libPods-raah-raahTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-raah-raahTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD265AC75EB4EB69803DB076 /* libPods-raah.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-raah.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 		13B07FAE1A68108700A75B9A /* raah */ = {
 			isa = PBXGroup;
 			children = (
+				6FC146AD27A56A24000A153F /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -145,7 +148,6 @@
 				C61845D9B6772D8C573F7B9E /* Pods-raah-raahTests.debug.xcconfig */,
 				C78087498A7C8FB6DB6DBE36 /* Pods-raah-raahTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -245,6 +247,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6FC146AE27A56A24000A153F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.raah"
+3    package="com.raahteam.raahtheapp"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -15,17 +15,17 @@
 12-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:4:5-67
 12-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:4:22-64
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.99.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/df7b208c45426f45016d16c0c3a6a059/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.99.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/df7b208c45426f45016d16c0c3a6a059/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
+13-->[com.facebook.flipper:flipper:0.99.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/c098108796af0707aa8bee93331e10d9/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.99.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/c098108796af0707aa8bee93331e10d9/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
 14
 15    <application
 15-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:6:5-24:19
-16        android:name="com.raah.MainApplication"
+16        android:name="com.raahteam.raahtheapp.MainApplication"
 16-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:7:7-38
 17        android:allowBackup="false"
 17-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:11:7-34
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.5.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/540dbfb90b248d7b59cd154497c15f99/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.5.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/630b866c4e6d69940e7de59b818a89d2/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
 20-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:9:7-41
@@ -42,7 +42,7 @@
 25-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/debug/AndroidManifest.xml:11:19-83
 26        <activity
 26-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:13:7-23:18
-27            android:name="com.raah.MainActivity"
+27            android:name="com.raahteam.raahtheapp.MainActivity"
 27-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:14:9-37
 28            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
 28-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:16:9-86
@@ -63,6 +63,94 @@
 35-->/Users/bhavikathakkar/Documents/Personal/raah-app/android/app/src/main/AndroidManifest.xml:21:23-70
 36            </intent-filter>
 37        </activity>
-38    </application>
-39
-40</manifest>
+38
+39        <meta-data
+39-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:36
+40            android:name="app_data_collection_default_enabled"
+40-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+41            android:value="true" />
+41-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-33
+42
+43        <service
+43-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-18:19
+44            android:name="com.google.firebase.components.ComponentDiscoveryService"
+44-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-89
+45            android:directBootAware="true"
+45-->[com.google.firebase:firebase-common:20.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/3ef82970a1c3dedae0294e9c26d6e3d4/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+46            android:exported="false" >
+46-->[com.google.firebase:firebase-common:20.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/3ef82970a1c3dedae0294e9c26d6e3d4/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:36:13-37
+47            <meta-data
+47-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:85
+48                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+48-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-120
+49                android:value="com.google.firebase.components.ComponentRegistrar" />
+49-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
+50        </service>
+51
+52        <provider
+52-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-24:38
+53            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+53-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-88
+54            android:authorities="com.raahteam.raahtheapp.reactnativefirebaseappinitprovider"
+54-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-86
+55            android:exported="false"
+55-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
+56            android:initOrder="99" />
+56-->[:react-native-firebase_app] /Users/bhavikathakkar/Documents/Personal/raah-app/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-35
+57
+58        <activity
+58-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:23:9-27:75
+59            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+59-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:24:13-93
+60            android:excludeFromRecents="true"
+60-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:25:13-46
+61            android:exported="false"
+61-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:26:13-37
+62            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+62-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:27:13-72
+63        <!--
+64            Service handling Google Sign-In user revocation. For apps that do not integrate with
+65            Google Sign-In, this service will never be started.
+66        -->
+67        <service
+67-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:33:9-37:51
+68            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+68-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:34:13-89
+69            android:exported="true"
+69-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:35:13-36
+70            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+70-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:36:13-107
+71            android:visibleToInstantApps="true" />
+71-->[com.google.android.gms:play-services-auth:20.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/b5bc918cb6efa0fd941bb8b754294509/transformed/jetified-play-services-auth-20.0.1/AndroidManifest.xml:37:13-48
+72
+73        <activity
+73-->[com.google.android.gms:play-services-base:18.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/c75cc2a28f38baf797cbe0c9b67210e4/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+74            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+74-->[com.google.android.gms:play-services-base:18.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/c75cc2a28f38baf797cbe0c9b67210e4/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+75            android:exported="false"
+75-->[com.google.android.gms:play-services-base:18.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/c75cc2a28f38baf797cbe0c9b67210e4/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+76            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+76-->[com.google.android.gms:play-services-base:18.0.1] /Users/bhavikathakkar/.gradle/caches/transforms-3/c75cc2a28f38baf797cbe0c9b67210e4/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+77
+78        <provider
+78-->[com.google.firebase:firebase-common:20.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/3ef82970a1c3dedae0294e9c26d6e3d4/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+79            android:name="com.google.firebase.provider.FirebaseInitProvider"
+79-->[com.google.firebase:firebase-common:20.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/3ef82970a1c3dedae0294e9c26d6e3d4/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+80            android:authorities="com.raahteam.raahtheapp.firebaseinitprovider"
+80-->[com.google.firebase:firebase-common:20.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/3ef82970a1c3dedae0294e9c26d6e3d4/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+81            android:directBootAware="true"
+81-->[com.google.firebase:firebase-common:20.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/3ef82970a1c3dedae0294e9c26d6e3d4/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+82            android:exported="false"
+82-->[com.google.firebase:firebase-common:20.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/3ef82970a1c3dedae0294e9c26d6e3d4/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+83            android:initOrder="100" />
+83-->[com.google.firebase:firebase-common:20.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/3ef82970a1c3dedae0294e9c26d6e3d4/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+84
+85        <meta-data
+85-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/545efab727eb4913ff3977c3e1628019/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+86            android:name="com.google.android.gms.version"
+86-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/545efab727eb4913ff3977c3e1628019/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+87            android:value="@integer/google_play_services_version" />
+87-->[com.google.android.gms:play-services-basement:18.0.0] /Users/bhavikathakkar/.gradle/caches/transforms-3/545efab727eb4913ff3977c3e1628019/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+88    </application>
+89
+90</manifest>
