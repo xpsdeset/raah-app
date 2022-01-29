@@ -5,5 +5,4 @@ firebase/*
 web-build
 hosting*
 ios/GoogleService-Info.plist
-ios/**
 android/app/google-services.json
