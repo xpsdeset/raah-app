@@ -4,3 +4,5 @@ node_modules/**/*
 firebase/*
 web-build
 hosting*
+ios/GoogleService-Info.plist
+ios/**
