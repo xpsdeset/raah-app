@@ -1,0 +1,6 @@
+module Pods_raah_raahTests {
+  umbrella header "Pods-raah-raahTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
