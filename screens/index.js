@@ -5,7 +5,7 @@ import { useFirebase, isLoaded, isEmpty } from "react-redux-firebase"
 import { useSelector } from "react-redux"
 import { Loading, AppContext } from "components"
 import OTPScreen from "./OTP"
-
+import StepperScreen from './Stepper';
 import FrontPageScreen from "./FrontPage"
 import StartSessionScreen from "./StartSession"
 import ChatScreen from "./Chat"
@@ -51,6 +51,11 @@ export default function NavigationStack() {
             />
           ) : (
             <>
+            <Stack.Screen
+                name="StepperScreen"
+                component={StepperScreen}
+                options={{ headerShown: false, title }}
+              />
               <Stack.Screen
                 name="FrontPageScreen"
                 component={FrontPageScreen}
